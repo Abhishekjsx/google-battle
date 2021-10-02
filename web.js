@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+app.get('/',(req,res)=>{
+	res.send("lets battle")
+});
+	
 app.post('/', function (req, res) {
   console.log(req.body);
   const moves = ['F', 'T', 'L', 'R'];
